@@ -19,7 +19,7 @@ export function LibraryCard({ topic }: LibraryCardProps) {
     <div className="flex flex-col lg:flex-row border bg-white border-zinc-200 rounded-3xl overflow-hidden">
       {/* LEFT — image */}
       <div className="relative w-full lg:w-1/3 aspect-[4/3] lg:aspect-auto min-h-48">
-         <div className="absolute inset-0 bg-primary/20" />
+           <img src="/assets/anak.png" alt="anak indonesia" className='w-full h-full object-cover' />
         {/* Popular badge */}
         {topic.isPopular && (
           <span className="absolute top-3 left-3 bg-white text-zinc-900 text-xs font-medium px-2.5 py-1 rounded-full shadow-sm">

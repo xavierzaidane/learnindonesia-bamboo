@@ -324,7 +324,7 @@ export function ChatInput({ onSend, isLoading, starterQuestions = [] }: ChatInpu
                 key={i}
                 onClick={() => onSend(q)}
                 disabled={isLoading}
-                className="text-left border border-zinc-200 dark:border-zinc-700 rounded-3xl bg-white px-4 py-3 text-lg text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="text-left border border-zinc-200 dark:border-zinc-700 rounded-3xl bg-white px-4 py-3 text-md text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {q}
               </button>

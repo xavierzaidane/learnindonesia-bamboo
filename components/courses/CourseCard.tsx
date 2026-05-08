@@ -29,11 +29,12 @@ export function CourseCard({ course }: CourseCardProps) {
       <div className="group relative overflow-hidden cursor-pointer rounded-t-4xl transition-all duration-300">
         {/* Image Section */}
         <div className="relative h-72 overflow-hidden rounded-b-4xl">
-          <div className="absolute inset-0 bg-primary/20" />
+
+          <img src="/assets/anak.png" alt="anak indonesia" className='w-full h-full object-cover' />
 
 
           {/* Gradient Content Overlay - bottom */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 rounded-b-3xl">
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/70 to-transparent p-6 rounded-b-3xl">
             <h3 className="text-xl font-semibold text-white mb-1 break-words line-clamp-2">
               {course.title}
             </h3>

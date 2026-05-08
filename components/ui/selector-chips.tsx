@@ -42,7 +42,7 @@ const SelectorChips: React.FC<SelectorChipsProps> = ({
   };
 
   return (
-    <div className="flex flex-wrap gap-2 w-full bg-white border border outline-none shadow-xs p-3 rounded-full ">
+    <div className="flex flex-wrap gap-2 w-full bg-white border border outline-none shadow-lg p-3 rounded-full ">
       {options.map((option) => {
         const isString = typeof option === 'string';
         const label = isString ? option : option.label;

@@ -2,7 +2,6 @@
 // https://tailwindcss.com/docs/font-family
 import type { Metadata } from "next";
 import { Geist, Noto_Serif_Georgian, Geist_Mono } from "next/font/google";
-import { Toaster } from "sonner";
 import "./globals.css";
 import Navbar from "@/components/navigations/Navbar";
 const fontSans = Geist({
@@ -35,7 +34,7 @@ export default function RootLayout({
       <body className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}>
         <Navbar />
         {children}
-        <Toaster />
+
       </body>
     </html>
   );

@@ -63,3 +63,37 @@ export interface ChatMessage {
   timestamp: Date
   isStreaming?: boolean
 }
+
+export interface ForumReply {
+  id: string
+  author: {
+    name: string
+    avatar: string
+    level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Native'
+  }
+  content: string
+  likes: number
+  createdAt: string
+  isAccepted?: boolean
+}
+
+export interface ForumThread {
+  id: string
+  slug: string
+  title: string
+  body: string
+  category: 'Grammar' | 'Vocabulary' | 'Pronunciation' | 'Culture' | 'Phrases' | 'Writing' | 'General'
+  level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels'
+  author: {
+    name: string
+    avatar: string
+    level: 'Beginner' | 'Intermediate' | 'Advanced' | 'Native'
+  }
+  tags: string[]
+  replies: ForumReply[]
+  views: number
+  createdAt: string
+  isPinned?: boolean
+  isSolved?: boolean
+  isHot?: boolean
+}

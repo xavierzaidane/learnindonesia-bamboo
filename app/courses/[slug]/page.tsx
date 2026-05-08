@@ -128,7 +128,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
           {/* Left Column */}
           <div className="lg:col-span-2">
             {/* Course Thumbnail */}
-            <div className="w-full aspect-video bg-primary/20 to-secondary/20 rounded-3xl mb-8" />
+               <img src="/assets/anak.png" alt="anak indonesia" className='w-full aspect-video rounded-3xl mb-8 object-cover' />
 
             {/* Badges */}
             <div className="flex gap-2 mb-8 flex-wrap">
@@ -147,7 +147,8 @@ export default async function CourseDetailPage({ params }: PageProps) {
             <div className="sticky top-24 space-y-6">
               {/* Course Card */}
               <Card className="overflow-hidden">
-                <div className="w-full aspect-video bg-primary/20 to-secondary/20" />
+
+                          <img src="/assets/anak.png" alt="anak indonesia" className='w-full aspect-video' />
                 <div className="p-6 space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm">
