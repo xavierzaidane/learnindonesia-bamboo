@@ -37,7 +37,10 @@ function TypingIndicator() {
 
 function EmptyState({ topic, onQuestionClick }: { topic: LibraryTopic; onQuestionClick: (q: string) => void }) {
   return (
-    <div className="flex flex-col items-center justify-center h-full px-4 py-16 text-center">
+    <div className="flex flex-col items-center justify-center h-full px-4 py-16 mt-15 text-center">
+       <div className="w-18 h-18 bg-primary rounded-2xl flex items-center justify-center mb-5">
+          <div className="w-8 h-8 border-4 border-bg-base rounded-xl" />
+        </div>
       <h2 className="text-5xl font-medium text-zinc-900 dark:text-zinc-50 mb-2">{topic.title}</h2>
       <p className="text-lg text-zinc-500 dark:text-zinc-400 max-w-sm">{topic.description}</p>
     </div>

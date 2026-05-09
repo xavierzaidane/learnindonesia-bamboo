@@ -120,34 +120,34 @@ export function ThreadPost({ thread }: ThreadPostProps) {
       <div className="lg:col-span-1">
         <div className="sticky top-24 space-y-6">
           {/* About Thread */}
-          <div className="bg-white rounded-3xl border border-zinc-200 p-4">
+          <div className="bg-white rounded-3xl border border p-4">
             <h3 className="font-semibold text-md text-zinc-900 mb-4">About This Thread</h3>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="text-xs text-zinc-500 uppercase font-medium">Category</p>
+                <p className="text-sm text-zinc-500  font-medium">Category</p>
                 <p className={cn('text-sm font-medium px-2.5 py-1 rounded-full inline-block mt-1', categoryColors[thread.category as keyof typeof categoryColors])}>
                   {thread.category}
                 </p>
               </div>
               <div>
-                <p className="text-xs text-zinc-500 uppercase font-medium">Level</p>
+                <p className="text-sm text-zinc-500  font-medium">Level</p>
                 <p className={cn('text-sm font-medium px-2.5 py-1 rounded-full inline-block mt-1', levelColors[thread.level as keyof typeof levelColors])}>
                   {thread.level}
                 </p>
               </div>
               <div>
-                <p className="text-xs text-zinc-500 uppercase font-medium">Views</p>
+                <p className="text-sm text-zinc-500  font-medium">Views</p>
                 <p className="text-sm font-medium mt-1">{thread.views}</p>
               </div>
               <div>
-                <p className="text-xs text-zinc-500 uppercase font-medium">Replies</p>
+                <p className="text-sm text-zinc-500  font-medium">Replies</p>
                 <p className="text-sm font-medium mt-1">{thread.replies.length}</p>
               </div>
             </div>
           </div>
 
           {/* Author Info */}
-          <div className="bg-white rounded-3xl border border-zinc-200 p-4">
+          <div className="bg-white rounded-3xl border border p-4">
             <h3 className="font-semibold text-md text-zinc-900 mb-4">Author</h3>
             <div className="flex items-center gap-3">
               <Image
@@ -169,7 +169,7 @@ export function ThreadPost({ thread }: ThreadPostProps) {
 
           {/* Tags */}
           {thread.tags.length > 0 && (
-            <div className="bg-white rounded-3xl border border-zinc-200 p-4">
+            <div className="bg-white rounded-3xl border border p-4">
               <h3 className="font-semibold text-md text-zinc-900 mb-3">Tags</h3>
               <div className="flex gap-2 flex-wrap">
                 {thread.tags.map((tag) => (
@@ -184,30 +184,6 @@ export function ThreadPost({ thread }: ThreadPostProps) {
             </div>
           )}
 
-          {/* Status */}
-          {(thread.isSolved || thread.isHot || thread.isPinned) && (
-            <div className="bg-white rounded-3xl border border-zinc-200 p-4">
-              <h3 className="font-semibold text-md text-zinc-900 mb-3">Status</h3>
-              <div className="flex flex-col gap-2">
-                {thread.isSolved && (
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                    <span className="text-sm text-green-700 font-medium">Solved</span>
-                  </div>
-                )}
-                {thread.isHot && (
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm text-orange-700 font-medium">🔥 Hot</span>
-                  </div>
-                )}
-                {thread.isPinned && (
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm text-blue-700 font-medium">📌 Pinned</span>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

@@ -241,7 +241,7 @@ export function ChatInput({ onSend, isLoading, starterQuestions = [] }: ChatInpu
   const hasContent = message.trim().length > 0
 
   return (
-    <div className="shrink-0  border-zinc-200 dark:border-zinc-700 dark:bg-zinc-800 px-4 py-4" onDragOver={onDragOver} onDragLeave={onDragLeave} onDrop={onDrop}>
+    <div className="shrink-0   px-4 py-4" onDragOver={onDragOver} onDragLeave={onDragLeave} onDrop={onDrop}>
       <div className="max-w-5xl mx-auto flex flex-col gap-3">
         {/* File Preview */}
         {files.length > 0 && (
@@ -257,7 +257,7 @@ export function ChatInput({ onSend, isLoading, starterQuestions = [] }: ChatInpu
         )}      
 
         {/* Input Section */}
-        <div className="flex flex-col gap-3 p-4 rounded-3xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900">
+        <div className="flex flex-col gap-3 p-4 rounded-3xl border border-border shadow-sm dark:border-zinc-700 bg-white dark:bg-zinc-900">
           {/* Textarea */}
           <div className="relative max-h-32 overflow-y-auto">
             <textarea
@@ -324,7 +324,7 @@ export function ChatInput({ onSend, isLoading, starterQuestions = [] }: ChatInpu
                 key={i}
                 onClick={() => onSend(q)}
                 disabled={isLoading}
-                className="text-left border border-zinc-200 dark:border-zinc-700 rounded-3xl bg-white px-4 py-3 text-md text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="text-left border border-zinc-200 dark:border-zinc-700 rounded-3xl shadow-sm bg-white px-4 py-3 text-md text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed "
               >
                 {q}
               </button>

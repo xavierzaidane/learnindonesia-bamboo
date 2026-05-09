@@ -88,7 +88,9 @@ export default async function CourseDetailPage({ params }: PageProps) {
       {/* Hero Section */}
       <div className="p-4">
         <div className="max-w-7xl mx-auto">
-          <Badge className="mb-4">{course.level}</Badge>
+          <Badge className={cn('text-xs font-normal rounded-full mb-4', levelColors[course.level])}>
+                          {course.level}
+                        </Badge>
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">{course.title}</h1>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
             {course.longDescription}

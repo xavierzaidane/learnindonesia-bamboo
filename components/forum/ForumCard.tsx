@@ -57,7 +57,7 @@ export function ForumCard({ thread }: ForumCardProps) {
                 categoryColors[thread.category as keyof typeof categoryColors]
               )}
             >
-              r/{thread.category.replace(/\s+/g, '')}
+              t/{thread.category.replace(/\s+/g, '')}
             </span>
             <span className="text-sm text-zinc-500">
               Posted by {thread.author.name} • {thread.createdAt}

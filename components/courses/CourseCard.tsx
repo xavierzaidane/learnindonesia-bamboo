@@ -54,7 +54,7 @@ export function CourseCard({ course }: CourseCardProps) {
                 <span className="text-base font-bold text-gray-900">{course.rating}</span>
                 <span className="text-sm text-gray-500">({course.reviewCount})</span>
               </div>
-              <Badge className={cn('text-xs font-semibold rounded-full', levelColors[course.level])}>
+              <Badge className={cn('text-xs font-normal rounded-full', levelColors[course.level])}>
                 {course.level}
               </Badge>
             </div>

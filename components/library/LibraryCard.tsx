@@ -56,7 +56,7 @@ export function LibraryCard({ topic }: LibraryCardProps) {
         {/* Buttons */}
         <div className="flex gap-4 mt-6">
           <Link href={`/library/${topic.slug}`}>
-            <button className="bg-primary text-white px-6 py-2.5 rounded-3xl text-sm font-medium hover:bg-zinc-800 transition-colors">
+            <button className="bg-primary text-white px-6 py-2.5 rounded-3xl text-sm font-medium hover:bg-primary/70 transition-colors ">
               Start learning
             </button>
           </Link>
