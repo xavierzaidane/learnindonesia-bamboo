@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link href="/forum" className="hover:text-primary transition-colors">
           Forum
         </Link>
-        <Link href="#" className="hover:text-primary transition-colors">
+        <Link href="/news" className="hover:text-primary transition-colors">
           News
         </Link>
          <Link href="#" className="hover:text-primary transition-colors">

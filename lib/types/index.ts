@@ -97,3 +97,36 @@ export interface ForumThread {
   isSolved?: boolean
   isHot?: boolean
 }
+
+export interface NewsBlock {
+  type: 'paragraph' | 'heading' | 'subheading' | 'quote' | 'tip' | 'list'
+  content: string
+  items?: string[]
+}
+
+export interface NewsPost {
+  id: string
+  slug: string
+  title: string
+  excerpt: string
+  category:
+    | 'Platform Update'
+    | 'Language Tip'
+    | 'Cultural Spotlight'
+    | 'Learning Guide'
+    | 'Community'
+    | 'Event'
+  thumbnail: string
+  carouselImages?: { src: string; title: string }[]
+  author: {
+    name: string
+    avatar: string
+    role: string
+  }
+  publishedAt: string
+  readTime: string
+  tags: string[]
+  content: NewsBlock[]
+  isFeatured?: boolean
+  isNew?: boolean
+}

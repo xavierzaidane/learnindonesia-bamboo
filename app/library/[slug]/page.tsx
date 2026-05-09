@@ -1,8 +1,6 @@
 import { notFound } from 'next/navigation'
 import { library } from '@/lib/data/library'
-import { TopicHeader } from '@/components/library/TopicHeader'
 import { LibraryChat } from '@/components/library/LibraryChat'
-import type { LibraryTopic } from '@/lib/types'
 
 export function generateStaticParams() {
   return library.map((topic) => ({
