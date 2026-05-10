@@ -17,15 +17,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'Indonesian borrowed hundreds of terms from Dutch. Here are five everyday words you probably use without realizing their origins.',
     category: 'Language Tip',
-    thumbnail: '/assets/anak.png',
-    carouselImages: [
-      { src: '/assets/anak.png', title: "5 Indonesian Words You Didn't Know Came From Dutch" },
-      { src: '/assets/download.jpeg', title: 'Dutch Influence in Indonesian Culture' },
-      { src: '/assets/anak.png', title: 'Explore the Etymology' },
-    ],
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Rani Pratama',
-      avatar: 'https://i.pravatar.cc/80?u=Rani%20Pratama',
+      avatar: '/assets/avatar.jpeg',
       role: 'Indonesian Language Expert',
     },
     publishedAt: 'May 3, 2025',
@@ -77,10 +72,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'Practice real conversations with guided prompts, pronunciation feedback, and instant replay. Speaking sessions are now part of every course.',
     category: 'Platform Update',
-    thumbnail: '/assets/download.jpeg',
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Maya Setiawan',
-      avatar: 'https://i.pravatar.cc/80?u=Maya%20Setiawan',
+      avatar: '/assets/avatar.jpeg',
       role: 'Product Lead',
     },
     publishedAt: 'May 1, 2025',
@@ -129,10 +124,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'From parades to workshops, Bali Arts Festival is a month-long celebration. Here is how language learners can enjoy it more deeply.',
     category: 'Cultural Spotlight',
-    thumbnail: '/assets/anak.png',
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Dimas Hartono',
-      avatar: 'https://i.pravatar.cc/80?u=Dimas%20Hartono',
+      avatar: '/assets/avatar.jpeg',
       role: 'Cultural Researcher',
     },
     publishedAt: 'April 22, 2025',
@@ -180,10 +175,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'A short daily routine can beat long weekend cramming. Here is a simple plan to keep your Indonesian moving forward.',
     category: 'Learning Guide',
-    thumbnail: '/assets/anak.png',
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Nadia Putri',
-      avatar: 'https://i.pravatar.cc/80?u=Nadia%20Putri',
+      avatar: '/assets/avatar.jpeg',
       role: 'Curriculum Designer',
     },
     publishedAt: 'April 15, 2025',
@@ -231,10 +226,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'Our community just hit a huge milestone. Here is what you helped build and what is coming next.',
     category: 'Community',
-    thumbnail: '/assets/anak.png',
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Adi Wicaksono',
-      avatar: 'https://i.pravatar.cc/80?u=Adi%20Wicaksono',
+      avatar: '/assets/avatar.jpeg',
       role: 'Community Manager',
     },
     publishedAt: 'April 7, 2025',
@@ -282,10 +277,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'Honorifics show respect and warmth in Indonesian. Learn when to use each one and how to sound natural.',
     category: 'Language Tip',
-    thumbnail: '/assets/anak.png',
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Siti Nurlaila',
-      avatar: 'https://i.pravatar.cc/80?u=Siti%20Nurlaila',
+      avatar: '/assets/avatar.jpeg',
       role: 'Language Coach',
     },
     publishedAt: 'March 28, 2025',
@@ -333,10 +328,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'From virtual workshops to local meetups, October brings extra opportunities to practice. See the highlights and join in.',
     category: 'Event',
-    thumbnail: '/assets/anak.png',
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Bima Saputra',
-      avatar: 'https://i.pravatar.cc/80?u=Bima%20Saputra',
+      avatar: '/assets/avatar.jpeg',
       role: 'Events Coordinator',
     },
     publishedAt: 'March 20, 2025',
@@ -384,10 +379,10 @@ export const newsPosts: NewsPost[] = [
     excerpt:
       'Avoid the most common pitfalls with quick fixes and examples. These small changes help your Indonesian sound clearer.',
     category: 'Learning Guide',
-    thumbnail: '/assets/anak.png',
+    thumbnail: '/assets/bali.png',
     author: {
       name: 'Rizky Ananda',
-      avatar: 'https://i.pravatar.cc/80?u=Rizky%20Ananda',
+      avatar: '/assets/avatar.jpeg',
       role: 'Indonesian Tutor',
     },
     publishedAt: 'March 8, 2025',

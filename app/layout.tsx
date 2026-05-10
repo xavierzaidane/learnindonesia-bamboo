@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Noto_Serif_Georgian, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navigations/Navbar";
+import Footer from "@/components/navigations/Footer";
 const fontSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -34,7 +35,7 @@ export default function RootLayout({
       <body className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}>
         <Navbar />
         {children}
-
+        <Footer/>
       </body>
     </html>
   );

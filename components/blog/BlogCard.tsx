@@ -2,15 +2,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { NewsPost } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { categoryBadgeStyles } from '@/lib/data/news'
+import { blogCategoryBadgeStyles } from '@/lib/data/blog'
 
-interface NewsCardProps {
+interface BlogCardProps {
   post: NewsPost
 }
 
-export function NewsCard({ post }: NewsCardProps) {
+export function BlogCard({ post }: BlogCardProps) {
   return (
-    <Link href={`/news/${post.slug}`}>
+    <Link href={`/blog/${post.slug}`}>
       <div className="border border-zinc-200 rounded-3xl overflow-hidden hover:border-zinc-300 hover:shadow-sm transition-all group bg-white">
         {/* Thumbnail */}
         <div className="relative aspect-video w-full">
@@ -29,7 +29,7 @@ export function NewsCard({ post }: NewsCardProps) {
           <span
             className={cn(
               'absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full',
-              categoryBadgeStyles[post.category]
+              blogCategoryBadgeStyles[post.category]
             )}
           >
             {post.category}
@@ -51,7 +51,7 @@ export function NewsCard({ post }: NewsCardProps) {
               width={24}
               height={24}
               className="rounded-full w-6 h-6"
-              referrerPolicy="no-referrer"
+              unoptimized
             />
             <span className="text-xs text-zinc-500">{post.author.name}</span>
             <span className="text-zinc-300">·</span>

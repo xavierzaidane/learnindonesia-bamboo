@@ -15,10 +15,8 @@ interface LibraryChatProps {
 function TypingIndicator() {
   return (
     <div className="flex items-start gap-3">
-      <div className="shrink-0 w-7 h-7 rounded-sm bg-primary flex items-center justify-center">
-        <div className="w-6 h-6 bg-primary rounded-sm flex items-center justify-center">
-          <div className="w-3 h-3 border-2 border-bg-base rounded-sm" />
-        </div>
+      <div className="shrink-0 flex items-center justify-center">
+             <img src="/assets/logo.png" alt="logo learnindonesia" className='h-10 w-auto'/>
       </div>
       <div className="bg-zinc-50 border border-zinc-200 rounded-2xl  px-4 py-3">
         <div className="flex gap-1 items-center h-4">
@@ -38,9 +36,7 @@ function TypingIndicator() {
 function EmptyState({ topic, onQuestionClick }: { topic: LibraryTopic; onQuestionClick: (q: string) => void }) {
   return (
     <div className="flex flex-col items-center justify-center h-full px-4 py-16 mt-15 text-center">
-       <div className="w-18 h-18 bg-primary rounded-2xl flex items-center justify-center mb-5">
-          <div className="w-8 h-8 border-4 border-bg-base rounded-xl" />
-        </div>
+       <img src="/assets/logo.png" alt="logo learnindonesia" className='h-35 w-auto mb-2'/>
       <h2 className="text-5xl font-medium text-zinc-900 dark:text-zinc-50 mb-2">{topic.title}</h2>
       <p className="text-lg text-zinc-500 dark:text-zinc-400 max-w-sm">{topic.description}</p>
     </div>

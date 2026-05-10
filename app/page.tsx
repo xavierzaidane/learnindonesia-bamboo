@@ -1,11 +1,21 @@
-import Hero from "@/components/home/Hero";
-import Reason from "@/components/home/Reason";
+import CoursesLanding from "@/components/landing/CoursesLanding";
+import FaqLAnding from "@/components/landing/FaqLanding";
+import Hero from "@/components/landing/Hero";
+import LatestCourse from "@/components/landing/LatestCourse";
+import LibraryLanding from "@/components/landing/LibraryLanding";
+import Quotes from "@/components/landing/Quotes";
+import Reason from "@/components/landing/Reason";
 
-export default function Home() {
+export default function Landing() {
   return (
     <div className="min-h-screen ">
         <Hero />
         <Reason />
+        <CoursesLanding />
+        <LatestCourse />
+        <Quotes/>
+        <LibraryLanding/>
+        <FaqLAnding/>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export function NewsDetails({ post }: NewsDetailsProps) {
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 			<div className="lg:col-span-3 pt-16">
-				<div className="border border-zinc-200 rounded-3xl bg-white p-6 mb-6">
+				<div className="p-6 mb-6">
 					<nav className="text-xs text-zinc-400 flex items-center gap-2 mb-6">
 						<Link href="/news" className="hover:text-zinc-600 transition-colors">
 							News
@@ -36,7 +36,7 @@ export function NewsDetails({ post }: NewsDetailsProps) {
 						{post.category}
 					</span>
 
-					<h1 className="text-3xl font-medium text-zinc-900 mt-3 mb-3 leading-tight">
+					<h1 className="text-4xl font-semibold text-zinc-900 mt-3 mb-3 leading-tight">
 						{post.title}
 					</h1>
 					<p className="text-zinc-500 text-base mb-6">{post.excerpt}</p>
@@ -72,7 +72,7 @@ export function NewsDetails({ post }: NewsDetailsProps) {
 					</div>
 				</div>
 
-				<div className="bg-white border border-zinc-200 rounded-3xl p-6">
+				<div className="p-6">
 					<NewsArticle blocks={post.content} />
 
 					<div className="flex flex-wrap gap-2 mt-10 pt-6 border-t border-zinc-100">

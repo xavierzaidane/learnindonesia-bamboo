@@ -2,10 +2,10 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { X } from 'lucide-react'
-// using chips for sort instead of Select dropdown
+// chips used instead of Select dropdown
 import type { NewsPost } from '@/lib/types'
 
-interface NewsFiltersProps {
+interface BlogFiltersProps {
   posts: NewsPost[]
   onFilterChange: (filtered: NewsPost[]) => void
 }
@@ -36,7 +36,7 @@ const getDateValue = (value: string) => {
   return Number.isNaN(timestamp) ? 0 : timestamp
 }
 
-export function NewsFilters({ posts, onFilterChange }: NewsFiltersProps) {
+export function BlogFilters({ posts, onFilterChange }: BlogFiltersProps) {
   const [category, setCategory] = useState<NewsPost['category'] | 'All'>('All')
   const [sortBy, setSortBy] = useState('newest')
 
@@ -98,9 +98,6 @@ export function NewsFilters({ posts, onFilterChange }: NewsFiltersProps) {
               </button>
             ))}
 
-          
-
-            {/* Sort chips */}
             <div className="flex items-center gap-2">
               {sortOptions.map((option) => (
                 <button
@@ -117,21 +114,23 @@ export function NewsFilters({ posts, onFilterChange }: NewsFiltersProps) {
               ))}
             </div>
 
-            {/* Clear Button */}
-            {hasActiveFilters && (
-              <button
-                onClick={handleClear}
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all rounded-full h-9 px-4 py-2 shrink-0 border border-zinc-200 bg-background text-zinc-900 hover:bg-zinc-50 shadow-xs"
-              >
-                <X className="w-4 h-4" />
-                Clear
-              </button>
-            )}
+        {hasActiveFilters && (
+          <button
+            onClick={handleClear}
+            className="inline-flex items-center gap-1 text-xs font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+          >
+            <X className="w-3.5 h-3.5" />
+            Clear filters
+          </button>
+        )}
           </div>
         </div>
-        {/* Gradient overlays */}
-     
       </div>
-    </div>
+
+      {/* Sort Dropdown & Clear Button Row */}
+     
+        
+      </div>
+
   )
 }

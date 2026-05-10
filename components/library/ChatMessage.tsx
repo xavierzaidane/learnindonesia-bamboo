@@ -52,10 +52,8 @@ export function ChatMessage({ message }: ChatMessageProps) {
 
   return (
     <div className="flex items-start gap-3 mb-4">
-      <div className="shrink-0 w-7 h-7 rounded-sm bg-primary flex items-center justify-center">
-         <div className="w-6 h-6 bg-primary rounded-sm flex items-center justify-center">
-          <div className="w-3 h-3 border-2 border-bg-base rounded-sm" />
-        </div>
+      <div className="shrink-0 flex items-center justify-center">
+         <img src="/assets/logo.png" alt="logo learnindonesia" className='h-10 w-auto'/>
       </div>
       <div className="flex-1">
         <div className="px-4">
