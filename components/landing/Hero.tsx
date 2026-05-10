@@ -17,7 +17,7 @@ export default function Hero() {
           <ArrowRight className="w-4 h-4 text-primary" />
         </div>
 
-       <h1 className="text-5xl md:text-6xl lg:text-[5.7rem] font-medium leading-[0.95] text-brand-dark tracking-tight">
+       <h1 className="text-5xl md:text-6xl lg:text-[4.7rem] font-medium leading-[0.95] text-brand-dark tracking-tight">
                Speak <span className="relative inline-block text-primary font-serif ">
                  Indonesian,
                  <span className="absolute inset-0 bg-primary -z-10 rounded-lg transform -skew-x-3 scale-110 opacity-20"></span>
@@ -25,7 +25,7 @@ export default function Hero() {
               confidently
             </h1>
 
-        <p className="text-lg md:text-xl mb-10 max-w-2xl mt-5">
+        <p className="text-lg md:text-lg mb-10 max-w-2xl mt-5">
           Learn Indonesian through interactive lessons, AI-powered conversations,
           pronunciation practice, and real-world vocabulary designed to help you speak
           naturally from day one.

@@ -49,7 +49,7 @@ export default function FaqLanding() {
                                 <AccordionItem
                                     key={item.id}
                                     value={item.id}>
-                                    <AccordionTrigger className="cursor-pointer text-base hover:no-underline">{item.question}</AccordionTrigger>
+                                    <AccordionTrigger className="cursor-pointer text-base hover:text-gray-700">{item.question}</AccordionTrigger>
                                     <AccordionContent>
                                         <p className="text-base">{item.answer}</p>
                                     </AccordionContent>

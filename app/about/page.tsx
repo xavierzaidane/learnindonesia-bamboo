@@ -68,7 +68,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-34">
       {/* Header */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-4">
