@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Stack
 
-## Getting Started
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS
+- shadcn/ui primitives
+- lucide-react icons
+- Embla Carousel for horizontal content browsing
+- next-themes for theme support
+- sonner for toast notifications
+- motion for animation-enhanced interactions
 
-First, run the development server:
+## Product Flow
+
+The application follows a simple learning journey:
+
+1. Users arrive on the homepage and are introduced to the platform through the hero, feature highlights, latest courses, latest blogs, and FAQ sections.
+2. Users browse the courses catalog to filter by level, category, and popularity.
+3. Course detail pages present the learning path, syllabus, lesson breakdown, reviews, and enrollment action.
+4. The knowledge library provides topic-based learning and an AI-style chat interface for guided exploration.
+5. The forum supports peer discussion through thread listings and detailed thread views.
+6. The news section surfaces platform updates and language-learning articles.
+
+This flow keeps the experience focused on discovery first, then deeper learning and community engagement.
+
+## Project Structure
+
+- `app/` - route-level pages and layouts
+- `components/` - reusable UI and feature components
+- `lib/data/` - mock content and structured data sources
+- `lib/types/` - shared TypeScript types
+- `public/assets/` - static images and media used across the app
+
+## Core Routes
+
+- `/` - landing page
+- `/courses` - course listing
+- `/courses/[slug]` - course detail page
+- `/library` - knowledge library
+- `/library/[slug]` - topic chat page
+- `/forum` - forum listing
+- `/forum/[slug]` - forum thread page
+- `/blog` - blog listing
+- `/blog/[slug]` - blog article page
+- `/news` - news listing
+- `/news/[slug]` - news article page
+- `/about` - platform overview
+
+## Local Development
+
+Install dependencies and start the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Available Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Implementation Notes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- The root layout injects the global navigation and footer for consistent framing across pages.
+- Fonts are loaded through `next/font` for optimized delivery.
+- Content pages rely on typed data files, which keeps the UI predictable and easy to extend.
+- Shared components are built to be reused across multiple sections of the site.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The application is ready to deploy on Vercel or any platform that supports Next.js applications.
 
-To learn more about Next.js, take a look at the following resources:
+For production builds, run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Then serve the generated output with:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run start
+```
