@@ -18,11 +18,11 @@ export default function Hero() {
         </div>
 
        <h1 className="text-5xl md:text-6xl lg:text-[4.7rem] font-medium leading-[0.95] text-brand-dark tracking-tight">
-               Speak <span className="relative inline-block text-primary font-serif ">
+               Learn <span className="relative inline-block text-primary font-serif ">
                  Indonesian,
                  <span className="absolute inset-0 bg-primary -z-10 rounded-lg transform -skew-x-3 scale-110 opacity-20"></span>
               </span> <br />
-              confidently
+              Effortlessly
             </h1>
 
         <p className="text-lg md:text-lg mb-10 max-w-2xl mt-5">
@@ -37,8 +37,8 @@ export default function Hero() {
             placeholder="Enter your email address"
             className="flex-1 bg-transparent px-4 text-sm outline-none "
           />
-          <button className="px-6 py-2.5 text-sm font-medium bg-secondary text-black hover:bg-secondary/90 rounded-full transition-colors whitespace-nowrap">
-            Book a Demo
+          <button className="px-6 py-2.5 text-sm font-medium bg-secondary text-black hover:bg-primary hover:text-white rounded-full transition-colors whitespace-nowrap">
+            Sign Yourself Up
           </button>
         </div>
 

@@ -7,30 +7,35 @@ export default function FaqLanding() {
     const faqItems = [
         {
             id: 'item-1',
-            question: 'How long does shipping take?',
-            answer: 'Standard shipping takes 3-5 business days, depending on your location. Express shipping options are available at checkout for 1-2 business day delivery.',
+            question: 'How does LearnIndo help me learn Indonesian?',
+            answer:
+            'LearnIndo combines interactive lessons, AI-powered conversations, pronunciation practice, and daily exercises to help you learn Indonesian naturally.',
         },
         {
             id: 'item-2',
-            question: 'What payment methods do you accept?',
-            answer: 'We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. For enterprise customers, we also offer invoicing options.',
+            question: 'Is LearnIndo suitable for beginners?',
+            answer:
+            'Yes. LearnIndo is designed for learners of all levels, including complete beginners. You can start with basic greetings, pronunciation, and essential vocabulary.',
         },
         {
             id: 'item-3',
-            question: 'Can I change or cancel my order?',
-            answer: 'You can modify or cancel your order within 1 hour of placing it. After this window, please contact our customer support team who will assist you with any changes.',
+            question: 'How does the AI learning coach work?',
+            answer:
+            'Our AI coach personalizes your learning experience by analyzing your progress, strengths, and practice habits.',
         },
         {
             id: 'item-4',
-            question: 'Do you ship internationally?',
-            answer: "Yes, we ship to over 50 countries worldwide. International shipping typically takes 7-14 business days. Additional customs fees may apply depending on your country's import regulations.",
+            question: 'Can I practice speaking Indonesian?',
+            answer:
+            'Absolutely. LearnIndo includes conversation practice, pronunciation feedback, and real-life dialogue simulations designed to help you speak Indonesian more naturally and confidently in everyday situations.',
         },
         {
             id: 'item-5',
-            question: 'What is your return policy?',
-            answer: 'We offer a 30-day return policy for most items. Products must be in original condition with tags attached. Some specialty items may have different return terms, which will be noted on the product page.',
+            question: 'Can I learn at my own pace?',
+            answer:
+            'Yes. LearnIndo is built for flexible learning, allowing you to study whenever and wherever you want. Short daily lessons and personalized recommendations make it easy to stay consistent without feeling overwhelmed.',
         },
-    ]
+        ]
 
     return (
         <section className="py-16 md:py-24">

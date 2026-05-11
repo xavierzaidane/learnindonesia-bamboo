@@ -207,7 +207,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                   </div>
 
                   {/* Share Button */}
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full rounded-3xl hover:bg-primary hover:text-white" size="lg">
                     Share Course
                   </Button>
                 </div>

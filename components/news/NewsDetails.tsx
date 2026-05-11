@@ -105,7 +105,7 @@ export function NewsDetails({ post }: NewsDetailsProps) {
 								<Accordion type="single" collapsible className="w-full">
 									{recentNews.map((post) => (
 										<AccordionItem key={post.id} value={post.id}>
-											<AccordionTrigger className="text-sm font-normal hover:no-underline">
+											<AccordionTrigger className="text-sm font-normal hover:text-gray-900">
 												{post.title}
 											</AccordionTrigger>
 											<AccordionContent>

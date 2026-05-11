@@ -9,7 +9,10 @@ import { SelectorChips } from '@/components/ui/selector-chips'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select'
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination'
 import { BookOpen, Users, Award, Mic, Book, PenTool } from 'lucide-react'
+
+const COURSES_PER_PAGE = 6
 
 const categories = [
   { label: 'All', value: 'All', icon: <Users size={16} /> },
@@ -25,6 +28,7 @@ export default function CoursesPage() {
   const [category, setCategory] = useState('All')
   const [sortBy, setSortBy] = useState('popular')
   const [searchQuery, setSearchQuery] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
 
   // Featured course
   const featuredCourse = courses.find((c) => c.isFeatured)
@@ -55,6 +59,18 @@ export default function CoursesPage() {
 
     return filtered
   }, [level, category, sortBy, searchQuery])
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredCourses.length / COURSES_PER_PAGE)
+  const startIndex = (currentPage - 1) * COURSES_PER_PAGE
+  const endIndex = startIndex + COURSES_PER_PAGE
+  const paginatedCourses = filteredCourses.slice(startIndex, endIndex)
+
+  // Reset to page 1 when filters change
+  const handleFilterChange = (callback: (value: any) => void, value: any) => {
+    setCurrentPage(1)
+    callback(value)
+  }
 
   const handleClearFilters = () => {
     setLevel('All')
@@ -107,7 +123,7 @@ export default function CoursesPage() {
             <SelectorChips
               options={categories}
               value={category !== 'All' ? [category] : []}
-              onChange={handleCategoryChange}
+              onChange={(selected) => handleFilterChange(handleCategoryChange, selected)}
               singleSelect
             />
           </div>
@@ -120,7 +136,7 @@ export default function CoursesPage() {
       <div className="pb-20 pt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="mb-8 flex justify-between items-start">
           <div className="flex gap-2">
-            <Select value={level} onValueChange={setLevel}>
+            <Select value={level} onValueChange={(value) => handleFilterChange(setLevel, value)}>
               <SelectTrigger className="w-40">
                 <SelectValue />
               </SelectTrigger>
@@ -131,7 +147,7 @@ export default function CoursesPage() {
                 <SelectItem value="Advanced">Advanced</SelectItem>
               </SelectContent>
             </Select>
-            <Select value={sortBy} onValueChange={setSortBy}>
+            <Select value={sortBy} onValueChange={(value) => handleFilterChange(setSortBy, value)}>
               <SelectTrigger className="w-48">
                 <SelectValue />
               </SelectTrigger>
@@ -157,16 +173,62 @@ export default function CoursesPage() {
           </div>
         ) : (
           <>
-           
-
             {/* Courses Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCourses.map((course) => (
+              {paginatedCourses.map((course) => (
                 <CourseCard key={course.id} course={course} />
               ))}
             </div>
 
-   
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12 flex justify-center">
+                <Pagination>
+                  <PaginationContent>
+                    {currentPage > 1 && (
+                      <PaginationItem>
+                        <PaginationPrevious onClick={() => setCurrentPage(currentPage - 1)} />
+                      </PaginationItem>
+                    )}
+
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                      if (
+                        page === 1 ||
+                        page === totalPages ||
+                        (page >= currentPage - 1 && page <= currentPage + 1)
+                      ) {
+                        return (
+                          <PaginationItem key={page}>
+                            <PaginationLink
+                              onClick={() => setCurrentPage(page)}
+                              isActive={page === currentPage}
+                            >
+                              {page}
+                            </PaginationLink>
+                          </PaginationItem>
+                        )
+                      }
+
+                      if (page === currentPage - 2 || page === currentPage + 2) {
+                        return (
+                          <PaginationItem key={page}>
+                            <PaginationEllipsis />
+                          </PaginationItem>
+                        )
+                      }
+
+                      return null
+                    })}
+
+                    {currentPage < totalPages && (
+                      <PaginationItem>
+                        <PaginationNext onClick={() => setCurrentPage(currentPage + 1)} />
+                      </PaginationItem>
+                    )}
+                  </PaginationContent>
+                </Pagination>
+              </div>
+            )}
           </>
         )}
       </div>

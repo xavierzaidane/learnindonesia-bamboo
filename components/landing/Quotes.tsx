@@ -21,14 +21,23 @@ export default function Quotes() {
                     strokeWidth={1.5}
                   />
                   <h2 className="relative z-10 text-5xl text-center font-medium leading-[1.1] tracking-tight opacity-90">
-                  Bringing <span className="text">reliable</span>,{' '}
-                  <span className="text-brand-olive">heartfelt</span>{' '}
-                  <span className="text-gray-500">dental</span> support that{' '}
-                  <span className="text-gray-500">inspires</span> you to feel{' '}
-                  <span className="font-medium font-serif text-primary decoration-brand-lime/50 underline decoration-4 underline-offset-4">stronger</span>, live{' '}
-                  <span className="font-medium  font-serif text-primary decoration-brand-lime/50 underline decoration-4 underline-offset-4">better</span>, and{' '}
-                  <span className="font-medium font-serif text-primary decoration-brand-lime/50 underline decoration-4 underline-offset-4">thrive</span>.
-                </h2>
+                    Helping you <span className="text">learn</span>,{" "}
+                    <span className="text-brand-olive">practice</span>{" "}
+                    <span className="text-gray-500">Indonesian</span> naturally through{" "}
+                    <span className="text-gray-500">interactive</span> lessons,{" "}
+                    <span className="font-medium font-serif text-primary decoration-brand-lime/50 underline decoration-4 underline-offset-4">
+                      real conversations
+                    </span>
+                    , smarter{" "}
+                    <span className="font-medium font-serif text-primary decoration-brand-lime/50 underline decoration-4 underline-offset-4">
+                      AI guidance
+                    </span>
+                    , and daily{" "}
+                    <span className="font-medium font-serif text-primary decoration-brand-lime/50 underline decoration-4 underline-offset-4">
+                      confidence
+                    </span>
+                    .
+                  </h2>
              </div>
              <div/>
 </div>

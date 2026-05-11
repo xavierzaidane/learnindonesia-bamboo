@@ -1,6 +1,6 @@
 'use client';
 
-import { Target, Zap, Shield, Users, TrendingUp, CircleCheck } from 'lucide-react';
+import { Target, Zap, Shield, Users, TrendingUp, CircleCheck, Lightbulb } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 
@@ -101,7 +101,7 @@ export default function AboutPage() {
         {/* What Makes Us Different */}
         <section className="space-y-6">
           <div className="flex items-center gap-3">
-            <Zap className="size-6 text-primary" />
+            <Lightbulb className="size-6 text-primary" />
             <h2 className="text-3xl font-semibold tracking-tight">What Makes Us Different</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">

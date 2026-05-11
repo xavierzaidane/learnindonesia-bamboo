@@ -27,7 +27,7 @@ export function EnrollButton({ courseTitle }: EnrollButtonProps) {
             Enrolled
           </Badge>
         </div>
-        <Button variant="outline" className="w-full" size="lg" disabled>
+        <Button variant="outline" className="w-full rounded-3xl " size="lg" disabled>
           Continue Learning
         </Button>
       </div>
@@ -35,7 +35,7 @@ export function EnrollButton({ courseTitle }: EnrollButtonProps) {
   }
 
   return (
-    <Button onClick={handleEnroll} size="lg" className="w-full">
+    <Button onClick={handleEnroll} size="lg" className="w-full rounded-3xl hover:bg-primary/70">
       Enroll for Free
     </Button>
   )

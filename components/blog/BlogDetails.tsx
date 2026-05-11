@@ -121,7 +121,7 @@ export function BlogDetails({ post }: BlogDetailsProps) {
             <Accordion type="single" collapsible className="w-full">
               {recentBlogs.map((blogPost) => (
                 <AccordionItem key={blogPost.id} value={blogPost.id}>
-                  <AccordionTrigger className="text-sm font-normal hover:no-underline">
+                  <AccordionTrigger className="text-sm font-normal hover:text-gray-900">
                     {blogPost.title}
                   </AccordionTrigger>
                   <AccordionContent>
