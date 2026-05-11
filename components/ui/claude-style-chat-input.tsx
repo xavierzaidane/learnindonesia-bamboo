@@ -51,6 +51,12 @@ interface AttachedFile {
     content?: string;
 }
 
+interface PastedContent {
+    id: string;
+    content: string;
+    timestamp: Date;
+}
+
 interface FilePreviewCardProps {
     file: AttachedFile;
     onRemove: (id: string) => void;
@@ -107,11 +113,7 @@ const FilePreviewCard: React.FC<FilePreviewCardProps> = ({ file, onRemove }) => 
 
 // 2. Pasted Content Card
 interface PastedContentCardProps {
-    content: {
-        id: string;
-        content: string;
-        timestamp: Date;
-    };
+    content: PastedContent;
     onRemove: (id: string) => void;
 }
 
@@ -241,7 +243,7 @@ interface ClaudeChatInputProps {
     onSendMessage: (data: {
         message: string;
         files: AttachedFile[];
-        pastedContent: AttachedFile[];
+        pastedContent: PastedContent[];
         model: string;
         isThinkingEnabled: boolean
     }) => void;
@@ -250,7 +252,7 @@ interface ClaudeChatInputProps {
 export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage }) => {
     const [message, setMessage] = useState("");
     const [files, setFiles] = useState<AttachedFile[]>([]);
-    const [pastedContent, setPastedContent] = useState<AttachedFile[]>([]);
+    const [pastedContent, setPastedContent] = useState<PastedContent[]>([]);
     const [isDragging, setIsDragging] = useState(false);
     const [selectedModel, setSelectedModel] = useState("sonnet-4.5");
     const [isThinkingEnabled, setIsThinkingEnabled] = useState(false);
@@ -351,7 +353,7 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage 
 
     const handleSend = () => {
         if (!message.trim() && files.length === 0 && pastedContent.length === 0) return;
-        onSendMessage({ message, files, pastedContent, model: selectedModel });
+        onSendMessage({ message, files, pastedContent, model: selectedModel, isThinkingEnabled });
         setMessage("");
         setFiles([]);
         setPastedContent([]);

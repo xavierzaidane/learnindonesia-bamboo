@@ -67,7 +67,7 @@ export default function CoursesPage() {
   const paginatedCourses = filteredCourses.slice(startIndex, endIndex)
 
   // Reset to page 1 when filters change
-  const handleFilterChange = (callback: (value: any) => void, value: any) => {
+  const handleFilterChange = (callback: (value: string) => void, value: string) => {
     setCurrentPage(1)
     callback(value)
   }
@@ -123,7 +123,10 @@ export default function CoursesPage() {
             <SelectorChips
               options={categories}
               value={category !== 'All' ? [category] : []}
-              onChange={(selected) => handleFilterChange(handleCategoryChange, selected)}
+              onChange={(selected) => {
+                setCurrentPage(1)
+                handleCategoryChange(selected)
+              }}
               singleSelect
             />
           </div>

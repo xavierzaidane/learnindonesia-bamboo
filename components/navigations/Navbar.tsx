@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { NAV_ITEMS, APP_NAME } from '@/lib/constants';
 
@@ -65,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBookClick, onNavigate }) => {
   return (
     <nav className="fixed top-0 z-50 flex items-center justify-between px-10 py-4 mx-auto w-full bg-bg-base/80 backdrop-blur-md border-b border-white/5">
       {/* Logo */}
-      <a 
+      <Link 
         href="/" 
         onClick={() => { 
           if (typeof window !== 'undefined' && window.gtag) {
@@ -79,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBookClick, onNavigate }) => {
         <span className="text-2xl font-medium font-serif tracking-tight text-brand-dark">
           {APP_NAME}
         </span>
-      </a>
+      </Link>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-8  font-medium">
